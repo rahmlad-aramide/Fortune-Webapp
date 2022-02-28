@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="fortune.png" type="image/png" style="background-color: white;">
+        <link
+          href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+        <title>Fortune | Your Banking App</title>
+        <script defer src="script.js"></script>
+    </head>
+<body>
+    <header>
+        <div class="brand--center">
+            <img src="fortune.png" class="nav-logo" />
+            <a href="#" class="nav-brand"> Fortune </a>
+          </div>
+    </header>
+    <main class="signup--form">
+        <div class="form--head--div">
+            <h2 class="form--head">
+                Create a Secure Account
+            </h2>
+            <p class="form--text">
+                Welcome to fortune, the solution towards a better financial future
+            </p>
+        </div>
+        <form action="" class="form--details">
+            <div class="input-n-label">
+                <label for="name">Name*</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="input-n-label">
+                <label for="email">Email Address*</label>
+                <input type="email" name="email address" id="email">
+            </div>
+            <div class="input-n-label">
+                <label for="number">Phone Number*</label>
+                <input type="tel" name="phone number" id="number">
+            </div>
+            <div class="input-n-label">
+                <label for="password">Password*</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="input-n-label">
+                <label for="referral">Referral Id (Optional)</label>
+                <input type="text" name="ref-id" id="referral">
+            </div>
+            <div class="input-n-label">
+                <label for="how-you-hear">How do you hear about us? (Optional)</label>
+                <select id="how-you-hear" name="how-you-hear" placeholder="c">
+                    <option value="click-to-select" selected disabled>Click To Select</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="friend-family-coworker">Friend/Family/Coworker</option>
+                    <option value="others">Others</option>
+                  </select>
+            </div>
+            <div class="input-n-label">
+                <input type="submit" value="SIGN UP" class="submit">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p class="form--footer">
+            Already have an Account? 
+            <a href="login.html" class="form--footer--link"> Log in</a>    
+        </p>
+    </footer>
+</body>
+</html>
