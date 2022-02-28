@@ -624,6 +624,53 @@ h3.section--7--reviewer {
   font-weight: 600;
   color: var(--color-primary);
 }
+
+/* Dashboard */
+.account--overview{
+  text-transform: uppercase;
+}
+.profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+.profile--picture{
+  border-radius: 50%;
+  height: 40px;
+}
+.add--money{
+  display: flex;
+  justify-content: space-between;
+}
+.add--money--button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-solid{
+  display: flex;
+  align-items: center;
+}
+.fa-shield-blank{
+  /* color: #203e86; */
+  outline: white;
+  fill: #203e86;
+}
+.amount{
+  display: flex;
+}
+.currency{
+  font-size: 12px;
+  font-weight: bold;
+}
+.kobo{
+  font-size: 10px;
+  font-weight: lighter;
+  align-self: end;
+}
+
+/* Responsiveness */
 @media(max-width: 900px){
   body{
     font-size: 80%;
