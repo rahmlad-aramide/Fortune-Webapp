@@ -1,16 +1,11 @@
 'use strict';
 
-window.addEventListener("scroll", function () {
-    var navbar = document.querySelector("nav");
-    navbar.classList.toggle("sticky", window.scrollY > 0);
-  });
+const navItems = document.querySelector(".items");
+const navToggle = document.querySelector(".toggle--nav");
 
-  function toggleNav() {
-    var navToggle = document.querySelector(".toggle");
-    var nav = document.querySelector(".nav");
-    navToggle.classList.toggle("active");
-    nav.classList.toggle("active");
-  }
+navToggle.addEventListener('click', ()=>{
+  navItems.classList.toggle('active')
+})
 
   // Slider
 const slider = function(){

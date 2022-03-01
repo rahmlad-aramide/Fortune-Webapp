@@ -32,9 +32,10 @@ nav {
   align-items: center;
   box-shadow: 1px 1px 4px gray;
   background-color: white;
-  height: 70px;
+  /* height: 70px; */
   position: fixed;
   width: 100%;
+  padding: 10px 0;
   top: 0;
   z-index: 1000;
 }
@@ -647,13 +648,13 @@ h3.section--7--reviewer {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .fa-solid{
   display: flex;
   align-items: center;
 }
 .fa-shield-blank{
-  /* color: #203e86; */
   outline: white;
   fill: #203e86;
 }
@@ -667,7 +668,45 @@ h3.section--7--reviewer {
 .kobo{
   font-size: 10px;
   font-weight: lighter;
-  align-self: end;
+}
+.totals{
+  display: flex;
+  justify-content: space-between;
+}
+.card--1, .card--3, .card--2{
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.card--1{
+  background-color: var(--color-primary);
+}
+.card--2{
+  background-color: var(--color-primary-darker);
+}
+.card--3{
+  background-color: var(--color-tertiary);
+}
+
+
+.toggle--nav{
+  display: none;
+  justify-content: space-between;
+  width: 40px;
+  flex-direction: column;
+  background-color: white;
+  height: 22px;
+}
+.toggle--nav .bar{
+  display: flex;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+}
+.space-between{
+  margin: 0;
 }
 
 /* Responsiveness */
@@ -682,6 +721,33 @@ h3.section--7--reviewer {
     font-size: 12px;
   }
 }
+@media (max-width: 780px){
+  .toggle--nav{
+    display: flex;
+    margin-right: 20px;
+  }
+  .items{
+    display: none;
+  }
+  .items.active{
+    display: flex;
+  }
+  .nav-items li{
+    margin: 8px 0;
+  }
+  .space-between{
+    margin-right: 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-items{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar{
+    flex-direction: column;
+  }
+}
 @media (max-width: 600px){
   body{
     font-size: 65%;
@@ -692,4 +758,5 @@ h3.section--7--reviewer {
   .copyright{
     font-size: 10px;
   }
+
 }

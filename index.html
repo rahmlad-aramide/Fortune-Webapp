@@ -16,19 +16,28 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <nav>
-      <div class="brand">
-        <img src="fortune.png" class="nav-logo" />
-        <a href="#" class="nav-brand"> Fortune </a>
+    <nav class="navbar">
+      <div class="brand space-between">
+        <div class="brand">
+          <img src="fortune.png" class="nav-logo" />
+          <a href="#" class="nav-brand"> Fortune </a>
+        </div>
+        <div>
+          <a href="#" class="toggle--nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+        </div>
       </div>
       <div class="items">
         <ul class="nav-items">
           <!-- <li><a href="#" onclick="toggleNav();">Home</a></li> -->
-          <li><a href="dashboard.html" onclick="toggleNav();">Save</a></li>
-          <li><a href="#invest" onclick="toggleNav();">Invest</a></li>
-          <li><a href="#faqs" onclick="toggleNav();">FAQs</a></li>
-          <li><a href="login.html" onclick="toggleNav();">Login</a></li>
-          <li><a href="signup.html" onclick="toggleNav();" class="pry-bg signup">Sign Up</a></li>
+          <li><a href="dashboard.html">Save</a></li>
+          <li><a href="#invest">Invest</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html" class="pry-bg signup">Sign Up</a></li>
         </ul>
       </div>
     </nav>
