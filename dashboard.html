@@ -16,10 +16,10 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <nav>
+    <nav class="dashboard--topnav">
       <div class="brand">
         <!-- <i class="fa-solid fa-bars fa-2xl"></i> -->
-      <a href="" class="toggle--nav">
+      <a href="#" class="dashboard--nav toggle--sidenav toggle--nav">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -35,8 +35,48 @@
         <i class="fa-solid fa-sort-down"></i>
       </div>
     </nav>
-    <main style="margin: 100px 20px 0 20px">
-      <div class="welcome">
+    <nav class="dashboard--sidenav">
+      <div class="brand">
+        <img src="fortune.png" class="nav-logo" />
+      </div>
+      <h3 class="username">
+        <span class="hi">Hi</span> Abdulrahman
+      </h3>
+      <ul class="sidenav--ul">
+        <li class="sidenav--li">
+          <a href="#" class="sidenav--link">
+            <img src="dashboard-icons/home.png" class="sidenav--icon" alt="">
+            <h3 class="sidenav--text">Home</h3>
+          </a>
+        </li>
+        <li class="sidenav--li">
+          <a href="plans.html" class="sidenav--link">
+            <img src="dashboard-icons/plan.png" class="sidenav--icon" alt="">
+            <h3 class="sidenav--text">Plans</h3>
+          </a>
+        </li>
+        <li class="sidenav--li">
+          <a href="#" class="sidenav--link">
+            <img src="dashboard-icons/gift.png" class="sidenav--icon" alt="">
+            <h3 class="sidenav--text">Referral</h3>
+          </a>
+        </li>
+        <li class="sidenav--li">
+          <a href="#" class="sidenav--link">
+            <img src="dashboard-icons/payment.png" class="sidenav--icon" alt="">
+            <h3 class="sidenav--text">Payment</h3>
+          </a>
+        </li>  
+        <li class="sidenav--li">
+          <a href="#" class="sidenav--link">
+            <img src="dashboard-icons/chat.png" class="sidenav--icon" alt="">
+            <h3 class="sidenav--text">Chat</h3>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="dashboard--main">
+      <section class="welcome">
         <p class="welcome-back">
           Welcome Back,
         </p>
@@ -46,23 +86,29 @@
         <p class="greeting">
           Good evening, stay safe.
         </p>
-      </div>
-      <div class="add--money">
+      </section>
+      <section class="add--money">
         <i class="fa-solid fa-arrows-rotate fa-xl"></i>
         <div class="add--money-button">
           <a class="bg--pry" style="margin-right: 0;">
-            ADD MONEY
-            <i class="fa-solid fa-angle-right" style="margin-left: 10px;"></i>
+            ADD MONEY >
+            <!-- <i class="fa-solid fa-angle-right" style="margin-left: 10px;"></i> -->
           </a>
         </div>
-      </div>
-      <div class="totals">
+      </section>
+      <section class="totals">
         <div class="card--1">
-          <i class="fa-solid fa-shield-blank"></i>
+          <img src="dashboard-icons/shield-outline.png
+          " class="sidenav--icon" alt="">
+          <!-- <i class="fa-solid fa-shield-blank"></i> -->
+          <img src="" alt="">
           <div class="total-head">
             <p class="total-savings">Total Savings</p>
             <h4 class="amount"> 
-              <span class="currency"><i class="fa-solid fa-naira-sign"></i></span>
+              <span class="currency">
+                <img src="dashboard-icons/naira-white.png" class="sidenav--icon" alt="">
+                <!-- <i class="fa-solid fa-naira-sign"></i> -->
+            </span>
             200,000
           <span class="kobo">
             .77
@@ -70,29 +116,123 @@
           </div>
         </div>
         <div class="card--2">
-          <i class="fa-solid fa-arrow-trend-up"></i>          <div class="total-head">
-            <p class="total-savings">Total Savings</p>
+          <!-- <i class="fa-solid fa-arrow-trend-up"></i>           -->
+          <img src="dashboard-icons/graph-rise.png" class="sidenav--icon" alt="">
+          <div class="total-head">
+            <p class="total-savings">Total Investment</p>
             <h4 class="amount"> 
-              <span class="currency"><i class="fa-solid fa-naira-sign"></i></span>
-            200,000
+              <span class="currency">
+                <!-- <i class="fa-solid fa-naira-sign"></i> -->
+                <img src="dashboard-icons/naira-white.png" class="sidenav--icon" alt="">
+              </span>
+            100,000
           <span class="kobo">
-            .77
+            .00
           </span> </h4>
           </div>
         </div>
         <div class="card--3">
-          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <!-- <i class="fa-solid fa-hand-holding-dollar"></i> -->
+          <img src="dashboard-icons/loan.png" class="sidenav--icon" alt="">
           <div class="total-head">
-            <p class="total-savings">Total Savings</p>
+            <p class="total-savings">Total Loan Obtained</p>
             <h4 class="amount"> 
-              <span class="currency"><i class="fa-solid fa-naira-sign"></i></span>
-            200,000
+              <span class="currency">
+                <!-- <i class="fa-solid fa-naira-sign"></i> -->
+                <img src="dashboard-icons/naira-white.png" class="sidenav--icon" alt="">
+              </span>
+            300,000
           <span class="kobo">
-            .77
+            .00
           </span> </h4>
           </div>
         </div>
+      </section>
+      <section>
+        <h3 class="head">Save & Invest</h3>
+        <div class="card--div">
+          <div class="card">
+            <img src="dashboard-icons/savings-plan.png" class="card--image" alt="">
+            <h4 class="plan">My Savings Plans ></h4>
+          </div>
+          <div class="card">
+            <img src="dashboard-icons/emergency.png" class="card--image" alt="">
+            <h4 class="plan">Emergency Funds ></h4>
+          </div>
+          <div class="card">
+            <img src="dashboard-icons/mutual.png" class="card--image" alt="">
+            <h4 class="plan">Mutual Funds ></h4>
+          </div>
+          <div class="card">
+            <img src="dashboard-icons/acquire-loan.png" class="card--image" alt="">
+            <h4 class="plan">Acquire Loan ></h4>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3 class="head">Refer</h3>
+        <div class="refer--box">
+          <img src="dashboard-icons/gift-white.png" class="card--image" alt="">
+          <h3 class="referral--bonus">
+            Get Free #250
+          </h3>
+          <h3 class="referral--text">
+            Refer and get paid for every friend you refer, sign up and save using fortune.
+          </h3>
+        </div>
+      </section>
+      <section>
+        <h3 class="head">TO-DO LIST</h3>
+        <div class="radio--list">
+          <div class="radio--item">
+            <input type="radio" name="verify email" id="verify email">
+            <label for="radio">
+              Add BVN of NIN now!
+            </label>
+          </div>
+          <div class="radio--item">
+            <input type="radio" name="verify email" id="verify email">
+            <label for="">
+              Add a valid debit card
+            </label>
+          </div>
+          <div class="radio--item">
+            <input type="radio" name="verify email" id="verify email">
+            <label for="">
+              Set your security question now!!
+            </label>
+          </div>
+          <div class="radio--item">
+            <input type="radio" name="verify email" id="verify email">
+            <label for="">
+              Refer a friend to sign up and save and earn #250 bonus
+            </label>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3 class="head">
+          DOWNLOAD THE MOBILE APP NOW!!!
+        </h3>
+        <div class="download--buttons">
+          <a href="#">
+            <button class="download">
+              <img class="store--icon" src="images/apple.png" alt="Apple logo"/>
+              <p class="get--on">
+                Download on the <br> <span class="store"> App Store </span> 
+              </p> 
+            </button>
+          </a>
+         <a href="#">
+           <button class="download">
+             <img class="store--icon" src="images/playstore.png" alt="Playstore logo "/>
+              <p class="get--on">             
+               GET IT ON <br> <span class="store"> Google Play </span>
+              </p>
+            </button>
+          </a>
       </div>
+      </section>
     </main>
 </body>
 </html>
