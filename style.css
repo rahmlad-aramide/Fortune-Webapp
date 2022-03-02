@@ -655,6 +655,9 @@ h3.section--7--reviewer {
 .dashboard--total{
   margin-bottom: 10px;
 }
+.fa-solid{
+  margin-top: 20px;
+}
 .amount{
   display: flex;
   align-items: center;
