@@ -652,16 +652,12 @@ h3.section--7--reviewer {
   justify-content: center;
 
 }
-.fa-solid{
-  display: flex;
-  align-items: center;
-}
-.fa-shield-blank{
-  outline: white;
-  fill: #203e86;
+.dashboard--total{
+  margin-bottom: 10px;
 }
 .amount{
   display: flex;
+  align-items: center;
 }
 .currency{
   font-size: 12px;
@@ -676,10 +672,14 @@ h3.section--7--reviewer {
   justify-content: space-between;
 }
 .card--1, .card--3, .card--2{
+  display: flex;
   color: white;
+  align-items: center;
   padding: 20px;
   border-radius: 5px;
   margin-top: 10px;
+  width: 220px;
+  height: 100px;
 }
 .card--1{
   background-color: var(--color-primary);
@@ -709,13 +709,20 @@ h3.head{
 }
 .dashboard--main .card{
   background-color: var(--color-white);
-  height: fit-content;
+  height: 180px;
   padding: 40px;
   margin: 0;
   box-shadow: 1px 1px 5px 0 lightgray;
 }
 .dashboard--main .card--image, .sidenav--icon{
-  width: 100px;
+  width: 50px;
+}
+.card{
+  display: flex;
+  justify-content: space-between;
+}
+.plan{
+  color: var(--color-primary);
 }
 .dashboard--main .head{
   margin: 50px 0 20px 0;
@@ -773,7 +780,11 @@ h3.head{
 .dashboard--sidenav .username{
   padding-left: 20px;
 }
+.naira--icon{
+  width: 15px;
+}
 .sidenav--icon{
+  height: 30px;
   width: 30px;
   margin-right: 10px;
 }
@@ -915,6 +926,15 @@ h3.head{
   .copyright{
     font-size: 12px;
   }
+  .bg-tert-left {
+    margin: 30px 0 0 20px;
+  }
+  .section--5--title,
+  .section--5--content {
+    display: flex;
+    margin: 10px 50px 0 30px;
+    text-align: left;
+  }
 }
 @media (max-width: 780px){
   .toggle--nav{
@@ -950,6 +970,18 @@ h3.head{
     display: block;
     margin-top: 10px;
   }
+  .kobo{
+    font-size: 65%;
+  }
+  .bg-tert-left {
+    margin: 30px 0 0 15px;
+  }
+  .section--5--title,
+  .section--5--content {
+    display: flex;
+    margin: 10px 40px 0 30px;
+    text-align: left;
+  }
 }
 @media (max-width: 600px){
   body{
@@ -958,8 +990,19 @@ h3.head{
   .section--9--rile, .section--9--center{
     font-size: 12px;
   }
+  .bg-tert-left {
+    margin: 30px 0 0 140px;
+  }
+  .section--5--title,
+  .section--5--content {
+    display: flex;
+    margin: 10px 20px 0 15px;
+    text-align: left;
+  }
   .copyright{
     font-size: 10px;
   }
-
+  .kobo{
+    font-size: 65%;
+  }
 }
