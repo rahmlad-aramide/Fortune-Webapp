@@ -629,6 +629,11 @@ h3.section--7--reviewer {
 }
 
 /* Dashboard */
+.x{
+  border: none;
+  margin-left: 70px;
+  background-color: white;
+}
 .account--overview{
   text-transform: uppercase;
 }

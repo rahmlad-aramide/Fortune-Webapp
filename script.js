@@ -22,7 +22,7 @@ const sideNavToggle = function(){
 }
 sideNavToggle();
 
-const sideNavLogo = document.querySelector('.nav-logo') 
+const sideNavLogo = document.querySelector('.x') 
 const toggleCollapse = function(){
   sideNavLogo.addEventListener('click', function(){
     sideNav.classList.toggle('active')
