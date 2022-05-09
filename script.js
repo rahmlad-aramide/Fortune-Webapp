@@ -5,7 +5,7 @@ const navItems = document.querySelector(".items");
 const navToggle = document.querySelector(".toggle--nav");
 const hrline = document.querySelector('.horizontal-line');
 const topNavToggle = function(){
-  navToggle.addEventListener('click', ()=>{
+  navToggle?.addEventListener('click', ()=>{
     navItems.classList.toggle('active')
     hrline.classList.toggle('show')
   })
@@ -16,7 +16,7 @@ topNavToggle();
 const sideNav = document.querySelector(".dashboard--sidenav");
 const sideToggle = document.querySelector(".toggle--sidenav");
 const sideNavToggle = function(){
-  sideToggle.addEventListener('click', ()=>{
+  sideToggle?.addEventListener('click', ()=>{
     sideNav.classList.toggle('active')
   })
 }
@@ -24,11 +24,15 @@ sideNavToggle();
 
 const sideNavLogo = document.querySelector('.x') 
 const toggleCollapse = function(){
-  sideNavLogo.addEventListener('click', function(){
+  sideNavLogo?.addEventListener('click', function(){
     sideNav.classList.toggle('active')
   })
 }
 toggleCollapse();
+
+// import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js';
+
+
 
 
 
