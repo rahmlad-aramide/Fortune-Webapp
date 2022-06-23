@@ -35,15 +35,15 @@ nav {
   align-items: center;
   box-shadow: 1px 1px 4px gray;
   background-color: white;
-  /* height: 70px; */
+  height: 70px;
   position: fixed;
   width: 100%;
   margin-bottom: 5rem;
   max-width: 100vw;
   padding: 10px 5px;
   top: 0;
-  z-index: 1000;
 }
+
 a {
   text-decoration: none;
 }
@@ -55,6 +55,17 @@ a {
   display: flex;
   align-items: center;
   margin: 0 0 0 10px;
+}
+.items {
+  visibility: hidden;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  margin: 0;
+}
+.items.active {
+  visibility: visible;
+  z-index: 0;
 }
 .nav-logo {
   height: 50px;
@@ -710,7 +721,10 @@ h3.section--7--reviewer {
 .totals {
   display: flex;
   justify-content: space-between;
+  overflow-x: scroll;
+  padding-bottom: 20px;
 }
+
 .card--1,
 .card--3,
 .card--2 {
@@ -719,7 +733,8 @@ h3.section--7--reviewer {
   align-items: center;
   padding: 20px;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 1.5rem;
+  margin-right: 10px;
   width: 220px;
   height: 100px;
 }
@@ -731,6 +746,7 @@ h3.section--7--reviewer {
 }
 .card--3 {
   background-color: var(--color-tertiary);
+  margin-right: 0;
 }
 .dashboard--topnav .dashboard--nav {
   display: flex;
@@ -741,6 +757,12 @@ h3.section--7--reviewer {
 .dashboard--main {
   margin: 100px 20px 0 20px;
 }
+.card--div .card.first {
+  margin-left: 2px;
+}
+.card--div .card.last {
+  margin-right: 0;
+}
 h3.head {
   opacity: 60%;
   margin-top: 30px;
@@ -748,13 +770,13 @@ h3.head {
 .dashboard--main .card--div {
   display: flex;
   justify-content: space-between;
+  overflow-x: auto;
 }
 .dashboard--main .card {
   background-color: var(--color-white);
   height: 180px;
   width: 250px;
   padding: 40px;
-  margin-right: 28%;
   box-shadow: 1px 1px 5px 0 lightgray;
 }
 .dashboard--main .card--image,
@@ -797,19 +819,23 @@ h3.head {
 .dashboard--main .download {
   margin: 0 25px 50px 0;
 }
+
 .dashboard--sidenav {
-  /* display: none; */
+  transform: translateX(-220px); 
+  transition: transform 1s ease-in-out, visibility 1s;
+    visibility: hidden;
   height: 100%;
   width: 220px;
-  left: -220px;
+  z-index: 999;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0 0 0 20px;
 }
 .dashboard--sidenav.active {
-  /* display: flex; */
-  left: 0;
+  transition: transform 1s ease-in-out, visibility 0s;
+    visibility: visible;
+    transform: translateX(0); 
 }
 .opacity {
   opacity: 50%;
@@ -906,7 +932,7 @@ h3.head {
   border-radius: 10px;
   width: 400px;
   display: flex;
-  height: 180px;
+  /* height: 180px; */
 }
 .new--plan--div {
   justify-content: center;
@@ -1020,7 +1046,21 @@ h4.color--pry {
     justify-content: center;
     width: 100vw;
   }
+  .section--8--text {
+    width: 90%;
+    padding-top: 0px;
+  }
+  .section--8--head {
+    padding: 30px;
+  }
+  @media (max-width: 900px){
+
+    .section--9--rile {
+      margin: 2rem 2rem;
+    }
+  }
   .lady--image {
+    display: none;
     width: 5rem;
     height: 10rem;
     border-radius: 40%;
@@ -1041,9 +1081,10 @@ h4.color--pry {
   }
   .section--9--rile {
     justify-content: space-between;
-    margin: 5rem 2rem;
+    margin: 1rem 2rem;
   }
 }
+
 @media (max-width: 780px) {
   .navbar {
     width: 100%;
@@ -1053,11 +1094,19 @@ h4.color--pry {
     display: flex;
     margin-right: 20px;
   }
+ 
   .items {
-    display: none;
+    /* display: none; */
+    transform: translateY(-125%); /* the element is transposed 300px to the left of where it's supposed to be */
+    transition: transform 1s ease-in-out, visibility 1s;
+    visibility: hidden;
+    background-color: white;
   }
   .items.active {
-    display: flex;
+    transform: translateY(0); /* the element is returned to where it's supposed to be */
+    transition: transform 1s ease-in-out, visibility 0s;
+    visibility: visible;
+    
   }
   .nav-items li {
     margin: 8px 0;
@@ -1074,7 +1123,8 @@ h4.color--pry {
   }
   .nav-items {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding-bottom: 1rem;
   }
   .navbar {
     flex-direction: column;
@@ -1110,11 +1160,16 @@ h4.color--pry {
     width: auto;
     min-width: 300px;
   }
-
-
 }
 @media (max-width: 600px) {
-
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  .typewriter h2 {
+    white-space: wrap;
+    margin: 10px 10px;
+  }
   section .hero {
     width: 100%;
   }
@@ -1131,7 +1186,12 @@ h4.color--pry {
   }
 
   .bg-tert-left {
-    margin: 30px 0 0 140px;
+    margin: 30px 0 0 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .section--4--title h3 {
+    margin: 0 10px;
   }
   .section--5--title,
   .section--5--content {
@@ -1139,12 +1199,80 @@ h4.color--pry {
     margin: 10px 20px 0 15px;
     text-align: left;
   }
+  .section--7--review {
+    max-width: 100vw;
+    width: 90%;
+    line-height: normal;
+    font-size: 1.2em;
+  }
   .kobo {
     font-size: 65%;
   }
+  .rating {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .content--text{
+    margin: 15px;
+  }
+  .confirmation--questions{
+    flex-direction: column;
+  }
 }
+.p2 {
+  padding-bottom: 5px;
+}
+
 @media (max-width: 375px) {
   .navbar {
     width: 100vw;
+  }
+}
+/* Typewriter Effect class */
+.typewriter h2 {
+  color: var(--color-primary);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--color-primary); /* The typwriter cursor */
+  /* white-space: nowrap; */
+   /* Keeps the content on a single line */
+  /* margin: 10px 50px;  */
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: normal; /* Adjust as needed */
+  line-height: 1;
+  animation: 
+    typing 4.5s steps(50, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect animation*/
+/* @keyframes typing {
+  from { width: 0 }
+  to { width: 450px }
+} */
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--color-primary) }
+}
+@media(min-width: 500px){
+  .typewriter h2 {
+    white-space: nowrap; /* Keeps the content on a single line */
+  margin: 10px 50px; /* Gives that scrolling effect as the typing happens */
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 450px }
+  }
+}
+@media (max-width: 499.99px){
+  .typewriter h2 {
+    white-space: wrap; /* Keeps the content on a single line */
+  margin: 10px 5px; /* Gives that scrolling effect as the typing happens */
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 120px }
   }
 }
